@@ -1,5 +1,5 @@
 {
-  "version": "1.18",
+  "version": "1.19",
   "tiers": [
     {
       "id": "vip",
@@ -15,8 +15,8 @@
     }
   ],
   "hints": {
-    "targetPlayers": "all: players in the game. everyone: lobby and game. lobby: lobby only. me: you. others: everyone in the game except you. You can also type a username.",
-    "targetAll": "all: players in the game. everyone: lobby and game. lobby: lobby only. me: you. others: everyone in the game except you. You can also type a username. For plates use plate-all, plate-nearest, or type plate-5 for a specific plate."
+    "targetPlayers": "all: players in the round. everyone: players in the lobby and in the round. lobby: lobby only. me: you. others: everyone in the game except you. You can also type a username.",
+    "targetAll": "all: players in the game. everyone: lobby and game. lobby: lobby only. me: you. others: everyone in the game except you. You can also type a username. For plates use plate-all, plate-nearest, or type plate-NUMBER for a specific plate."
   },
   "commands": [
     {
@@ -46,7 +46,7 @@
     {
       "tier": "vip",
       "name": "dif",
-      "desc": "Set the difficulty from 1 to 10.",
+      "desc": "Set the difficulty of the next round from 1 to 10.",
       "struct": [
         {
           "name": "difficulty",
@@ -60,13 +60,13 @@
     {
       "tier": "vip",
       "name": "event",
-      "desc": "Summon an event. Pick from every plate, arena, big, player, class, disaster and rare event.",
+      "desc": "Summon an event a round is happening duhh.",
       "struct": [
         {
           "name": "event name",
           "type": "select",
           "optionName": "events",
-          "hint": "Rare, mini-disaster and seasonal events are not separate lists. Each one sits inside the category it belongs to, shown indented."
+          "hint": "Rare, mini-disaster and seasonal events are not separate lists. Each one sits inside the category it belongs to."
         },
         {
           "name": "target",
@@ -79,7 +79,7 @@
     {
       "tier": "vip",
       "name": "mod",
-      "desc": "Forcefully activate a modifier.",
+      "desc": "Forcefully activate a modifier a round is happening.",
       "struct": [
         {
           "name": "modifier name",
@@ -91,19 +91,19 @@
     {
       "tier": "vip",
       "name": "endgame",
-      "desc": "Kills every remaining player.",
+      "desc": "Kills every remaining player in the round.",
       "struct": []
     },
     {
       "tier": "vip",
       "name": "startsuddendeath",
-      "desc": "Begin sudden death.",
+      "desc": "Begin sudden death while a round is happening.",
       "struct": []
     },
     {
       "tier": "vip",
       "name": "effect",
-      "desc": "Apply an effect to a player, or pick clear to remove effects instead.",
+      "desc": "Apply an effect to a player.",
       "struct": [
         {
           "name": "effect type",
@@ -175,31 +175,31 @@
     {
       "tier": "vip",
       "name": "pause",
-      "desc": "Pause all events from occurring.",
+      "desc": "Pause all events from occurring while a round is happening.",
       "struct": []
     },
     {
       "tier": "vip",
       "name": "unpause",
-      "desc": "Let events occur again.",
+      "desc": "Let events occur again while a round is happening.",
       "struct": []
     },
     {
       "tier": "vip",
       "name": "enablepowers",
-      "desc": "Allow powers to be used.",
+      "desc": "Allow powers to be used for the next round.",
       "struct": []
     },
     {
       "tier": "vip",
       "name": "disablepowers",
-      "desc": "Stop powers from being used.",
+      "desc": "Stop powers from being used for the next round.",
       "struct": []
     },
     {
       "tier": "vip",
       "name": "map",
-      "desc": "Force a map in mode.map format, for example classic.normal. Mega server maps have 49 after the mode, for example classic49.normal.",
+      "desc": "Force a map for the next round, in mode.map format, for example classic.normal. Mega server maps have 49 after the mode, for example classic49.normal.",
       "struct": [
         {
           "name": "map",
@@ -362,7 +362,7 @@
           "name": "reason",
           "type": "text",
           "optional": true,
-          "hint": "Any text. Roblox chat-filters it."
+          "hint": "Any text. Roblox chat filters it."
         }
       ]
     },
@@ -379,7 +379,7 @@
           "name": "reason",
           "type": "text",
           "optional": true,
-          "hint": "Any text. Roblox chat-filters it."
+          "hint": "Any text. Roblox chat filters it."
         }
       ]
     },
@@ -408,7 +408,7 @@
           "name": "reason",
           "type": "text",
           "optional": true,
-          "hint": "Any text. Roblox chat-filters it."
+          "hint": "Any text. Roblox chat filters it."
         }
       ]
     },
@@ -425,7 +425,7 @@
           "name": "reason",
           "type": "text",
           "optional": true,
-          "hint": "Any text. Roblox chat-filters it."
+          "hint": "Any text. Roblox chat filters it."
         }
       ]
     },
@@ -448,7 +448,7 @@
           "name": "reason",
           "type": "text",
           "optional": true,
-          "hint": "Any text. Roblox chat-filters it."
+          "hint": "Any text. Roblox chat filters it."
         }
       ]
     },
@@ -499,7 +499,7 @@
     {
       "tier": "admin",
       "name": "givepower",
-      "desc": "Give a player a power.",
+      "desc": "Give a player any power.",
       "struct": [
         {
           "name": "player",
@@ -554,7 +554,7 @@
     {
       "tier": "admin",
       "name": "add",
-      "desc": "Add currency to a player.",
+      "desc": "Give currency to a player.",
       "struct": [
         {
           "name": "currency",
@@ -575,7 +575,7 @@
     {
       "tier": "admin",
       "name": "addlevel",
-      "desc": "Add levels to a player.",
+      "desc": "Give levels to a player.",
       "struct": [
         {
           "name": "player",
@@ -591,7 +591,7 @@
     {
       "tier": "admin",
       "name": "addxp",
-      "desc": "Add XP to a player.",
+      "desc": "Give XP to a player.",
       "struct": [
         {
           "name": "player",
@@ -613,7 +613,7 @@
     {
       "tier": "admin",
       "name": "startstandoff",
-      "desc": "Start a standoff.",
+      "desc": "Start a standoff while a round is happening.",
       "struct": []
     }
   ],
@@ -650,7 +650,7 @@
             "optionsList": ["anvilrain", "cataclysm", "explosivelootboxrain", "firetornado", "lavatsunami", "megaeyebeam", "megatsunami", "redgiant", "snowstorm"]
           },
           {
-            "groupName": "Mini-disaster arena events (bugged since v1.35)",
+            "groupName": "Mini-disaster arena events",
             "optionsList": ["artillerydisasterevent", "gravitymoondisasterevent", "jellyfishpartydisasterevent", "laserplanetdisasterevent", "lavaeruptiondisasterevent", "missiledisasterevent", "rocketsdisasterevent", "seaminesdisasterevent", "tacoraindisasterevent", "teslaballsdisasterevent", "treasureislanddisasterevent"]
           },
           {
@@ -668,7 +668,7 @@
         "optionsList": ["bombhead", "confused", "errorflop", "oneFlop", "playerbounty", "playerswap", "presentdelivery", "randomgear", "randomplaceable", "randompotion", "resizeplayer", "stink", "stronk", "teleport", "virus"],
         "subGroups": [
           {
-            "groupName": "Mini-disaster player events (bugged since v1.35)",
+            "groupName": "Mini-disaster player events",
             "optionsList": ["virusdisasterevent"]
           }
         ]
@@ -704,7 +704,7 @@
             "optionsList": ["scatteredplates"]
           },
           {
-            "groupName": "Class modifiers (they do nothing on their own)",
+            "groupName": "Class modifiers (they legit do nothing why did i add this LOL)",
             "optionsList": ["buildings", "environment", "plateEffect", "popup"]
           }
         ]
@@ -776,7 +776,7 @@
         "optionsList": ["candy bucket", "snow cannon"]
       },
       {
-        "groupName": "Command-only tools",
+        "groupName": "Command only tools",
         "optionsList": ["foil", "legacy sand bucket", "legacy sword", "music thingy", "pepper", "semi paintball gun"]
       }
     ],
@@ -786,175 +786,175 @@
         "optionsList": [
           {
             "value": "player_1",
-            "label": "grav coil"
+            "label": "Gravity Coil"
           },
           {
             "value": "player_2",
-            "label": "nuke"
+            "label": "Summon Nuke"
           },
           {
             "value": "player_3",
-            "label": "bomb"
+            "label": "Bomb"
           },
           {
             "value": "player_4",
-            "label": "tripmine"
+            "label": "Tripmine"
           },
           {
             "value": "player_5",
-            "label": "banana"
+            "label": "Banana Blast"
           },
           {
             "value": "player_6",
-            "label": "coffee"
+            "label": "Sugary Coffee"
           },
           {
             "value": "player_7",
-            "label": "recall"
+            "label": "Plate Recall"
           },
           {
             "value": "player_8",
-            "label": "choc egg"
+            "label": "Chocolate Egg"
           },
           {
             "value": "player_9",
-            "label": "bombastic egg"
+            "label": "Bombastic Egg (REMOVED)"
           },
           {
             "value": "player_10",
-            "label": "space egg"
+            "label": "Egg of Celestial Disruption"
           },
           {
             "value": "player_11",
-            "label": "ice egg"
+            "label": "Egg of Silent Winter"
           },
           {
             "value": "player_12",
-            "label": "lofty egg"
+            "label": "Egg of Lofty Levitation"
           },
           {
             "value": "player_13",
-            "label": "slime egg"
+            "label": "Egg of Slimy Situations"
           },
           {
             "value": "player_14",
-            "label": "golden egg"
+            "label": "The Golden Egg"
           },
           {
             "value": "player_15",
-            "label": "rocket egg"
+            "label": "Egg of Radical Rocketeering"
           },
           {
             "value": "player_16",
-            "label": "flashbang"
+            "label": "Flashbang"
           },
           {
             "value": "player_17",
-            "label": "lucky block"
+            "label": "Lucky Block"
           },
           {
             "value": "player_18",
-            "label": "double jump"
+            "label": "Double Jump"
           },
           {
             "value": "player_19",
-            "label": "troll lootbox"
+            "label": "Lootbox Troll"
           },
           {
             "value": "player_20",
-            "label": "pocket cauldron"
+            "label": "Pocket Cauldron"
           },
           {
             "value": "player_21",
-            "label": "medkit"
+            "label": "Medkit"
           },
           {
             "value": "player_22",
-            "label": "hermes boots"
+            "label": "Hermes' Boots"
           },
           {
             "value": "player_23",
-            "label": "witch hat"
+            "label": "Witches' Hat"
           },
           {
             "value": "player_24",
-            "label": "frostfire"
+            "label": "Frostfire"
           },
           {
             "value": "player_26",
-            "label": "boomerang"
+            "label": "Boomerang"
           },
           {
             "value": "player_27",
-            "label": "witches broom"
+            "label": "Witches' Broom"
           },
           {
             "value": "player_29",
-            "label": "waterballoon"
+            "label": "Water Balloon"
           },
           {
             "value": "player_31",
-            "label": "sand bucket"
+            "label": "Sand Bucket"
           },
           {
             "value": "player_32",
-            "label": "lava beam"
+            "label": "Lava Beam"
           },
           {
             "value": "player_33",
-            "label": "beachball"
+            "label": "Beach Ball"
           },
           {
             "value": "player_34",
-            "label": "shark bait"
+            "label": "Shark Bait"
           },
           {
             "value": "player_35",
-            "label": "berserker"
+            "label": "Berserker"
           },
           {
             "value": "player_36",
-            "label": "parrot"
+            "label": "Parrot Retriever"
           },
           {
             "value": "player_37",
-            "label": "chain lightning"
+            "label": "Electromagnetic Pulse"
           },
           {
             "value": "player_38",
-            "label": "trident"
+            "label": "Trident"
           },
           {
             "value": "player_39",
-            "label": "necromancer staff"
+            "label": "Necromancer's Staff"
           },
           {
             "value": "player_40",
-            "label": "grimoire"
+            "label": "Grimoire"
           },
           {
             "value": "player_41",
-            "label": "jack o launcher"
+            "label": "Jack-o-Launcher"
           },
           {
             "value": "player_42",
-            "label": "haunted lantern"
+            "label": "Haunted Lantern"
           },
           {
             "value": "player_43",
-            "label": "toolbox"
+            "label": "Toolbox"
           },
           {
             "value": "player_44",
-            "label": "snowflake"
+            "label": "Snowflake"
           },
           {
             "value": "player_45",
-            "label": "frost staff"
+            "label": "Frost Staff"
           },
           {
             "value": "player_46",
-            "label": "horn"
+            "label": "Horn of the Forlorn Blizzard"
           }
         ]
       },
@@ -963,55 +963,55 @@
         "optionsList": [
           {
             "value": "plate_1",
-            "label": "grow"
+            "label": "Plate Grow"
           },
           {
             "value": "plate_2",
-            "label": "mushroom"
+            "label": "Buff-Shroom"
           },
           {
             "value": "plate_3",
-            "label": "icy plate"
+            "label": "icy plate (REMOVED)"
           },
           {
             "value": "plate_6",
-            "label": "house"
+            "label": "House"
           },
           {
             "value": "plate_7",
-            "label": "snowglobe"
+            "label": "Snowglobe"
           },
           {
             "value": "plate_8",
-            "label": "tree"
+            "label": "Tree"
           },
           {
             "value": "plate_9",
-            "label": "chair"
+            "label": "Chair"
           },
           {
             "value": "plate_10",
-            "label": "shrink"
+            "label": "Plate Shrink"
           },
           {
             "value": "plate_11",
-            "label": "train"
+            "label": "I Like Trains"
           },
           {
             "value": "plate_12",
-            "label": "bridge"
+            "label": "Build-a-Bridge"
           },
           {
             "value": "plate_13",
-            "label": "stretch"
+            "label": "Plate Stretch"
           },
           {
             "value": "plate_14",
-            "label": "eraser"
+            "label": "Eraser"
           },
           {
             "value": "plate_15",
-            "label": "sunflower"
+            "label": "Sunflower Pal"
           }
         ]
       },
@@ -1020,7 +1020,7 @@
         "optionsList": [
           {
             "value": "arena_1",
-            "label": "tsunami"
+            "label": "Tsunami"
           }
         ]
       }
