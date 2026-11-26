@@ -60,7 +60,7 @@
     {
       "tier": "vip",
       "name": "event",
-      "desc": "Summon an event a round is happening duhh.",
+      "desc": "Summon an event while a round is happening duhh.",
       "struct": [
         {
           "name": "event name",
@@ -79,7 +79,7 @@
     {
       "tier": "vip",
       "name": "mod",
-      "desc": "Forcefully activate a modifier a round is happening.",
+      "desc": "Forcefully activate a modifier while a round is happening.",
       "struct": [
         {
           "name": "modifier name",
