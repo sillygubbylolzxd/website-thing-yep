@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Average Plate Gaem – Command Builder</title>
+<meta name="description" content="Pick an Average Plate Gaem command, fill it in and copy it into the game.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍽️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<header><div class="plate"></div><div><h1>Average Plate Gaem</h1><p>Pick a command, fill it in, copy it into the game.</p></div></header>
+<div class="wrap">
+<aside class="side"><input id="q" type="search" placeholder="Search all commands" aria-label="Search commands"><div class="tabs" id="tabs"></div><div id="cmds"></div></aside>
+<main id="panel"><p class="hint">Loading commands…</p></main>
+</div>
+<footer>
+<p><small><code id="version">v0.0</code> • <a href="https://github.com/Shaehl/aPG-vip-commands-cheat-sheet">Source code</a></small></p>
+<p><small>Based on ow9u's aPG vip commands cheat sheet. Thanks to <a href="https://discord.com/users/777172240927162429">TheCat</a> for <a href="https://discord.com/channels/1057920802999246878/1080126457872916521">the thread</a> with the listed in-game staff.</small></p>
+</footer>
+<div class="bar"><code id="out"></code><button id="cp">Copy</button><span class="tip">or press <kbd>Ctrl</kbd> <kbd>C</kbd></span></div>
+<div class="toast" id="t" role="status"></div>
+<script src="src/index.js"></script>
+</body>
+</html>
