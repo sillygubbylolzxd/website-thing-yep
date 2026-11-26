@@ -1,4 +1,4 @@
-# ow9u's aPG vip commands cheat sheet</h1>
+# Thecat's APG commands cheat sheet</h1>
 
 Cheat sheet for [average Plate Gaem](https://www.roblox.com/games/6405807112) Roblox game.
 
