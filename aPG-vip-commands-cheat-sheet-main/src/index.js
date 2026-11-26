@@ -123,6 +123,8 @@ function field(p, i) {
             const its = g.optionsList.filter(ok)
             if (!its.length) return false
             if (g.groupName) host.append(el("h4", "", g.groupName))
+            const rarity = /\b(common|rare|epic|legendary)\b/i.exec(g.groupName || "")
+            if (rarity) host.classList.add("r-" + rarity[1].toLowerCase())
             const r = el("div", "row")
             its.forEach(x => {
                 const { value: v, label: l } = item(x)
